@@ -1,19 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: giftai-ingress
-  namespace: gift-ai
+  name: lostfound-ingress
+  namespace: lost-and-found
 spec:
   rules:
   - host: localhost
     http:
       paths:
-      - path: /gift
+      - path: /lostfound
         pathType: Prefix
         backend:
           service:
-            name: gift-ai-service
+            name: lost-and-found-service
             port:
-              number: 5173
+              number: 8000
 
-    

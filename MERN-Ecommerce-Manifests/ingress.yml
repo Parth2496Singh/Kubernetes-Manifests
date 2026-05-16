@@ -16,7 +16,7 @@ spec:
             port:
               number: 5000
 
-      - path: /
+      - path: /mern
         pathType: Prefix
         backend:
           service:
